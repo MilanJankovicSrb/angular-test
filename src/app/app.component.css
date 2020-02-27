@@ -1,0 +1,27 @@
+.mat-drawer-container, .mat-drawer  {
+    background-color: transparent !important;
+}
+router-outlet {
+    height: 100%;
+}
+.sidenavContainer {
+    height: 100%;
+}
+mat-sidenav-content {
+    height: 100%;
+}
+.sidenavMenu {
+    background-color: #1d1d1dc2 !important;
+    display: block;
+    padding-top: 16px;
+}
+.sidenavButtons {
+    width: 100%;
+    margin-bottom: 10px;
+}
+.heightOnSmallScreen {
+    height: calc(100vh - 56px);
+}
+.heightOnBigScreen {
+    height: calc(100vh - 64px);
+}

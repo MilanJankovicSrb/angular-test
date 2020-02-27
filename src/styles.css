@@ -1,1 +1,43 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { 
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
+    background-image: url('./assets/main.jpg') !important;
+  background-color: #4d4d4d  !important;
+  background-position: center  !important;
+  background-repeat: no-repeat  !important;
+  background-size: cover  !important;
+}
+.transparentBg{
+  background-color: transparent;
+}
+
+.seeThrough {
+  background-color: #4d4d4d00 !important;
+  font-size: 18px;
+}
+::-webkit-scrollbar {
+  width: 6px !important;
+}
+::-webkit-scrollbar-track {
+  background: #808080 !important;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(66, 66, 66) !important;
+  outline: 1px solid slategrey;
+  border-radius: 10px;
+}
+.mat-progress-spinner circle, .mat-spinner circle {
+  stroke: #ffd1d1;
+}
+body {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+}
