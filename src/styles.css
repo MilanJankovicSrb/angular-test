@@ -41,3 +41,44 @@ body {
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Opera and Firefox */
 }
+.offersContainer {
+  height: 100%;
+  text-align: center;
+}
+.post {
+  width: 90% !important;
+  display: inline-block !important;
+  margin-bottom: 10px !important;
+  background-color: #ffffffd4 !important;
+  border-radius: 10px !important;
+}
+@media only screen and (max-width: 380px) {
+  .post {
+      width: 85%;
+  }
+}
+.postHeaderImage {
+  background-image: url('./assets/offer.jpg');
+  background-size: cover;
+  position: relative;
+  bottom: 8px;
+}
+.firstPost {
+  margin-top: 25px;
+}
+.cardBody {
+  margin-top: 10px;
+}
+.positionSpinner {
+  position: fixed !important;
+  top: calc(50% - 50px) !important;
+  left: calc(50% - 50px) !important;
+}
+.bodyParagraph {
+  text-align: left;
+  font-size: 1.3em;
+  text-align: center;
+}
+::ng-deep .mat-card-header-text {
+  margin: 2px 16px !important;
+}
