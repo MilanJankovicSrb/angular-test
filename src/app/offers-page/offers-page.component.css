@@ -1,0 +1,17 @@
+
+.success {
+  color: green;
+  border: 1px solid green;
+}
+.pass {
+  color: red;
+  border: 1px solid red;
+}
+.activeSuccess {
+  background-color: green;
+  color: white;
+}
+.activePass {
+  background-color: red;
+  color: white;
+}

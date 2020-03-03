@@ -1,0 +1,18 @@
+<mat-spinner *ngIf="showSpinner" class="positionSpinner"></mat-spinner>
+<div class="transparentBg offersContainer" *ngIf="data" [@listAnimation]="data?.length">
+    <mat-card class="post mat-elevation-z24" *ngFor="let post of data, let index = index" [class.firstPost]="index == 0">
+        <mat-card-header>
+          <div mat-card-avatar class="postHeaderImage"></div>
+          <mat-card-title>{{post.name | titlecase  }}</mat-card-title>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content class="cardBody">
+          <p class="bodyParagraph"><b>Contract starting date:</b>&emsp;{{post.contractStartDate | date: 'dd/MM/yyyy'}}</p>
+          <p class="bodyParagraph"><b>Contract ending date:</b>&emsp;{{post.contractEndDate | date: 'dd/MM/yyyy'}}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button [ngClass]="{'activeSuccess': offerSeized[index]}" class="success" (click)="actionOnTheOffer(index, offerSeized, offerPassed)">Take Offer!</button>
+          <button mat-button [ngClass]="{'activePass': offerPassed[index]}" class="pass" (click)="actionOnTheOffer(index, offerPassed, offerSeized)">Pass Offer</button>
+        </mat-card-actions>
+      </mat-card>
+</div>

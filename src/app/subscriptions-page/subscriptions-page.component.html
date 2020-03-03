@@ -1,0 +1,21 @@
+<mat-spinner *ngIf="showSpinner" class="positionSpinner"></mat-spinner>
+<div class="transparentBg offersContainer" *ngIf="data" [@fadeAnimation]="data?.length">
+    <mat-card class="post mat-elevation-z24" *ngFor="let subscription of data, let index = index" [class.firstPost]="index == 0">
+        <mat-card-header>
+          <mat-icon  mat-card-avatar svgIcon="error-outline" class="iconPosition" *ngIf="!subscribed[index]"></mat-icon>
+          <mat-icon  mat-card-avatar svgIcon="done-outline" class="iconPosition" *ngIf="subscribed[index]"></mat-icon>
+          <mat-card-title>{{subscription.name | titlecase  }}</mat-card-title>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content class="cardBody">
+          <p class="bodyParagraph"><b>Type of subscription:</b>&emsp;{{subscription.type | lowercase }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button [ngClass]="{'activeSubscription': subscribed[index]}" class="subscription" (click)="subscribe(index)" [disabled]="subscribed[index]">
+            <span *ngIf="!subscribed[index]">Subscribe!</span>
+            <span *ngIf="subscribed[index]">Subscribed!</span>
+          </button>
+          <button mat-button *ngIf="subscribed[index]" class="undoSubscription" (click)="unsubscribe(index)">Unsubscribe</button>
+        </mat-card-actions>
+      </mat-card>
+</div>

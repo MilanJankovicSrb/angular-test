@@ -1,0 +1,16 @@
+.subscription {
+    border: 1px solid blue;
+    color: blue;
+}
+.undoSubscription {
+    border: 1px solid black;
+    color: black;
+}
+.activeSubscription {
+    background-color: blue;
+    color: white !important;
+}
+.iconPosition {
+    position: relative;
+    bottom: 2px;
+}

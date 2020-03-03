@@ -1,0 +1,36 @@
+.iconContact {
+  padding: 0 14px;
+}
+.spacer {
+  flex: 1 1 auto;
+}
+.title {
+  font-family: 'Trade Winds';
+  margin-right: 60px;
+  font-size: 28px;
+}
+.hamburgerMenu {
+  color: white;
+  font-size: 28px !important;
+  position: relative;
+  bottom: 3px;
+  margin-right: 15px;
+}
+mat-toolbar {
+  background-color: #1d1d1de6 !important;
+}
+.gitHubLogo {
+  background-image:
+    radial-gradient(
+      circle closest-side, 
+      white,
+      #1d1d1dad
+    );
+}
+.gitHubLink {
+  height: 36px;
+}
+a {
+  color: white;
+  text-decoration: none; /* no underline */
+}

@@ -1,0 +1,13 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button class="hamburgerMenu" [disableRipple]="true"
+        *ngIf="mobileQuery.matches" (click)="toggleSidenav()">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span class="title" [ngStyle]="{'margin-right': mobileQuery.matches? '10px':'60px'}">iPro Solutions</span>
+    <button mat-flat-button color="primary" class="seeThrough" routerLink="/offers" *ngIf="!mobileQuery.matches">Offers</button>
+    <button mat-flat-button color="primary" class="seeThrough" routerLink="/subscriptions" *ngIf="!mobileQuery.matches">Subscriptions</button>
+    <span class="spacer"></span>
+    <a class="gitHubLink" href="https://github.com/MilanJankovicSrb/angular-test">
+        <img class="gitHubLogo" src="./../../assets/GitHub-Mark-32px.png" alt="GitHub Logo" width="36px" height="36px">
+    </a>
+</mat-toolbar>
